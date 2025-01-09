@@ -8,6 +8,7 @@ mlops_project.egg-info/dependency_links.txt
 mlops_project.egg-info/requires.txt
 mlops_project.egg-info/top_level.txt
 pipeline/__init__.py
+pipeline/training_pipeline.py
 src/__init__.py
 src/custom_exception.py
 src/data_ingestion.py

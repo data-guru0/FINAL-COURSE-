@@ -11,6 +11,7 @@ Requires-Dist: numpy
 Requires-Dist: scikit-learn
 Requires-Dist: pyyaml
 Requires-Dist: mlflow
+Requires-Dist: flask
 Dynamic: author
 Dynamic: author-email
 Dynamic: requires-dist
