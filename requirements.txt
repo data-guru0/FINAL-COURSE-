@@ -1,0 +1,6 @@
+google-cloud-storage
+pandas
+numpy
+scikit-learn
+pyyaml
+mlflow

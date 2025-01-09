@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: mlops_project
+Version: 0.1
+Summary: An MLOps project setup with custom logging and exception handling
+Author: Your Name
+Author-email: your.email@example.com
+Requires-Python: >=3.7
+Requires-Dist: google-cloud-storage
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: pyyaml
+Requires-Dist: mlflow
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
