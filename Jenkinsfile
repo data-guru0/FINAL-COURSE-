@@ -56,6 +56,31 @@ pipeline {
             }
         }
 
+        stage('Deploy to Cloud Run') {
+    steps {
+        withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS1')]) {
+            script {
+                echo 'Deploying to Cloud Run...'
+                sh '''
+                    # Ensure gcloud is available in the PATH
+                    export PATH=$PATH:${GCLOUD_PATH}
+
+                    # Authenticate with Google Cloud using the service account
+                    gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS1}
+                    gcloud config set project ${GCP_PROJECT}
+
+                    # Deploy the Docker image to Cloud Run
+                    gcloud run deploy course-testing \
+                        --image=gcr.io/${GCP_PROJECT}/course-testing:latest \
+                        --platform=managed \
+                        --region=us-central1 \
+                        --allow-unauthenticated
+                '''
+            }
+        }
+    }
+}
+
 
     }
 }
