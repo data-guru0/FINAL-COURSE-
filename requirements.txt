@@ -5,4 +5,5 @@ scikit-learn
 pyyaml
 mlflow
 imbalanced-learn
+lightgbm
 flask
